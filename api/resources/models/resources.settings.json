@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resources",
+  "info": {
+    "name": "resources"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "duration": {
+      "type": "integer",
+      "default": 10,
+      "required": true,
+      "max": 600,
+      "min": 5
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

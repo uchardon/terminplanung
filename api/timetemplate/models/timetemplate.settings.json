@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timetemplates",
+  "info": {
+    "name": "timetemplate"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "weekday": {
+      "type": "enumeration",
+      "enum": [
+        "Mo",
+        "Di",
+        "Mi",
+        "Do",
+        "Fr",
+        "Sa",
+        "So"
+      ],
+      "required": true
+    },
+    "resource": {
+      "model": "resources"
+    },
+    "hour": {
+      "type": "integer",
+      "max": 23,
+      "min": 0,
+      "default": 0
+    },
+    "minute": {
+      "type": "integer",
+      "max": 60,
+      "default": 0,
+      "min": 0
+    }
+  }
+}
